@@ -52,3 +52,31 @@ for (let i = 0; i < length; i++){
 }
 wordSelect(word,arr);
 
+// task5
+// Given a string and symbols. Change first symbol by the second one in the string.
+
+let string = prompt("Enter a string");
+let changeSymbol = prompt ("Enter the changeing symbol");
+let symbol = prompt ("Enter a symbol");
+function changeSymbols(string, c, s) {
+    let arr=[]
+    let m = " ";
+    let n = " ";
+    for(let i = 0; i < string.length; i++){
+        arr.push(string[i])
+    }
+    for(let i = 1 ; i < arr.length; i++){
+        if(arr[i] === c){
+            arr[i] = s;
+         }
+    }
+    m = arr.toString()
+    for(let k = 0; k < m.length; k++){
+        if (m[k] === ","){
+        continue;
+    }
+    n = n + m[k]
+    }
+   return n
+}
+changeSymbols(string,changeSymbol,symbol)
