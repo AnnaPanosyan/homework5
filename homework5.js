@@ -64,9 +64,12 @@ let result =  " ";
     for(let i = 0; i < s.length ; i++){
         let bull = false;
         for(let j = 0; j < st.length; j++){
-            if(s[i] === st[j]){
+            if("" + s[i] + s[i+1] === st || s[i] === st){
                 bull = true;
+                i++;
                 break;
+            }else{
+                bull = false;
             }
         }
     if (!bull){
