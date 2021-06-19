@@ -52,6 +52,35 @@ for (let i = 0; i < length; i++){
 }
 wordSelect(word,arr);
 
+
+// task4
+// Given an array of numbers. Create an array containing only unique elements.
+
+let arr = [];
+let arrLength = prompt("Enter arrray's length.")
+for(let i = 0; i < arrLength; i++ ){
+    arr.push(prompt("Given an array of number."))
+}
+function findUniqueElements (arr) {
+    let result = [];
+    for(let i = 0; i < arr.length ; i++){
+        let bull = false;
+        for(let j = i+1; j<arr.length; j++){
+            if(arr[i] === arr[j]){
+                bull = true;
+                break;
+            }
+        }
+    if (!bull){
+        result.push(arr[i])
+    }
+    }
+    return result
+}
+findUniqueElements(arr)
+
+
+
 // task5
 // Given a string and symbols. Change first symbol by the second one in the string.
 
