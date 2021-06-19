@@ -59,23 +59,13 @@ let string = prompt("Enter a string");
 let changeSymbol = prompt ("Enter the changeing symbol");
 let symbol = prompt ("Enter a symbol");
 function changeSymbols(string, c, s) {
-    let arr = [];
-    let string1 = " ";
     let result = " ";
-    for(let i = 0; i < string.length; i++){
-        arr.push(string[i])
-    }
-    for(let i = 1 ; i < arr.length; i++){
-        if(arr[i] === c){
-            arr[i] = s;
+    for(let i = 1 ; i < string.length; i++){
+        if(string[i] === c){
+           result = result + s
+         }else{
+            result = result + string[i];
          }
-    }
-    string1 = arr.toString();
-    for(let k = 0; k < string1.length; k++){
-        if (string1[k] === ","){
-            continue;
-    }
-    result = result + string1[k];
     }
    return result
 }
