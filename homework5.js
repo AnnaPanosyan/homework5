@@ -52,6 +52,30 @@ for (let i = 0; i < length; i++){
 }
 wordSelect(word,arr);
 
+// task3
+// Write a function which receives two strings and removes appearances of the second string from
+// the first one.
+
+let sentence = prompt("Enter a sentence.");
+let string = prompt("Enter a string.")
+
+function receives (s, st) {
+let result =  " ";
+    for(let i = 0; i < s.length ; i++){
+        let bull = false;
+        for(let j = 0; j < st.length; j++){
+            if(s[i] === st[j]){
+                bull = true;
+                break;
+            }
+        }
+    if (!bull){
+       result = result + s[i]
+    }
+    }
+    return result
+}
+receives(sentence, string)
 
 // task4
 // Given an array of numbers. Create an array containing only unique elements.
