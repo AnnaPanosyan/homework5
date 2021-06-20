@@ -35,10 +35,10 @@ function wordSelect( w, a) {
             for(let j = 0; j < a[i].length; j++){
                 for(let k=0; k < w.length; k++){
                     if(a[i][j] === w[k]){ 
-                        result = a[i]; 
-                        break;
+                        result = a[i];
                     }
                 }
+                     break;
             }
         }
     }
